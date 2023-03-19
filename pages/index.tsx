@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import Image from 'next/image';
+import profile from '../public/profile-modified.png';
 
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
@@ -109,11 +110,58 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillGithub />
-            <AiFillLinkedin />
-            <AiOutlineMail />
+            <Link href="https://github.com/nhistory" target="_blank">
+              <AiFillGithub />
+            </Link>
+            <Link href="https://www.linkedin.com/in/sehwann/" target="_blank">
+              <AiFillLinkedin />
+            </Link>
+            <Link href="mailto:sehwan.lee.dev@gmail.com">
+              <AiOutlineMail />
+            </Link>
           </div>
-          <div></div>
+          <div className="mx-auto rounded-full w-80 h-80 relative overflow-hidden my-20 md:h-96 md:w-96">
+            <Image src={profile} alt="profile picture" />
+          </div>
+          <div className="text-center p-10 py-10">
+            <h3 className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl">
+              Techstacks
+            </h3>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+              <div className="mb-12 lg:mb-0">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/2.png"
+                  className="img-fluid grayscale px-6 md:px-12"
+                  alt="Nasa - logo"
+                />
+              </div>
+
+              <div className="mb-12 lg:mb-0">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/1.png"
+                  className="img-fluid grayscale px-6 md:px-12"
+                  alt="Amazon - logo"
+                />
+              </div>
+
+              <div className="mb-12 lg:mb-0">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/3.png"
+                  className="img-fluid grayscale px-6 md:px-12"
+                  alt="Nike - logo"
+                />
+              </div>
+
+              <div className="mb-12 lg:mb-0">
+                <img
+                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/4.png"
+                  className="img-fluid grayscale px-6 md:px-12"
+                  alt="Ikea - logo"
+                />
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
