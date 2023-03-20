@@ -3,8 +3,12 @@ import { useState } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import Image from 'next/image';
 import profile from '../public/profile-modified.png';
+import feStack from '../public/FE.png';
+import beStack from '../public/BE.png';
+import otherStack from '../public/Other.png';
 import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
+import Techstacks from '@/components/TechStacks';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -49,40 +53,32 @@ export default function Home() {
             <h3 className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl">
               Techstacks
             </h3>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+            <Techstacks></Techstacks>
+            {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="mb-12 lg:mb-0">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/2.png"
-                  className="img-fluid grayscale px-6 md:px-12"
-                  alt="Nasa - logo"
+                <Image
+                  src={feStack}
+                  className="img-fluid grayscale rounded-2xl shadow-2xl"
+                  alt="Front end stack"
                 />
               </div>
 
               <div className="mb-12 lg:mb-0">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/1.png"
-                  className="img-fluid grayscale px-6 md:px-12"
-                  alt="Amazon - logo"
+                <Image
+                  src={beStack}
+                  className="img-fluid grayscale rounded-2xl shadow-2xl"
+                  alt="Back end stack"
                 />
               </div>
 
               <div className="mb-12 lg:mb-0">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/3.png"
-                  className="img-fluid grayscale px-6 md:px-12"
-                  alt="Nike - logo"
+                <Image
+                  src={otherStack}
+                  className="img-fluid grayscale rounded-2xl shadow-2xl"
+                  alt="Other stack"
                 />
               </div>
-
-              <div className="mb-12 lg:mb-0">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/new-templates/landing-page/4.png"
-                  className="img-fluid grayscale px-6 md:px-12"
-                  alt="Ikea - logo"
-                />
-              </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>
