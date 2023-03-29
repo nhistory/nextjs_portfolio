@@ -8,6 +8,9 @@ import Typescript from '../public/logos/typescript.jpg';
 import Sass from '../public/logos/sass.png';
 import React from '../public/logos/react.png';
 import Python from '../public/logos/python.png';
+import feStack from '../public/FE.png';
+import beStack from '../public/BE.png';
+import otherStack from '../public/Other.png';
 
 const responsiveSettings = [
   {
@@ -35,7 +38,7 @@ const responsiveSettings = [
 
 const Techstacks = () => {
   return (
-    <div className="pt-5 px-5 mb-5 rounded-2xl dark:bg-white md:mx-20">
+    <div className="pt-5 px-5 mb-5 rounded-2xl dark:bg-white md:mx-20 shadow-2xl">
       <Slide
         slidesToScroll={1}
         slidesToShow={2}
@@ -85,6 +88,31 @@ const Techstacks = () => {
           className="grayscale ml-3 dark:bg-white"
         />
       </Slide>
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-12 lg:mb-0">
+          <Image
+            src={feStack}
+            className="img-fluid grayscale rounded-2xl shadow-2xl"
+            alt="Front end stack"
+          />
+        </div>
+
+        <div className="mb-12 lg:mb-0">
+          <Image
+            src={beStack}
+            className="img-fluid grayscale rounded-2xl shadow-2xl"
+            alt="Back end stack"
+          />
+        </div>
+
+        <div className="mb-12 lg:mb-0">
+          <Image
+            src={otherStack}
+            className="img-fluid grayscale rounded-2xl shadow-2xl"
+            alt="Other stack"
+          />
+        </div>
+      </div> */}
     </div>
   );
 };
