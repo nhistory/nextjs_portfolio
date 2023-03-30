@@ -2,16 +2,31 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import profile from '../public/profile-modified.png';
 import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
 import Techstacks from '@/components/TechStacks';
+import ProjectList from '@/components/ProjectList';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const updateDarkMode = (dark: boolean) => {
     setDarkMode(dark);
+  };
+
+  const moveInVariants: Variants = {
+    hide: {
+      opacity: 0,
+      x: 100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 2,
+      },
+    },
   };
 
   return (
@@ -144,10 +159,28 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="text-center p-10 py-10">
-            <h3 className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl">
+            <motion.h3
+              className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
+              initial="hide"
+              whileInView="show"
+              exit="hide"
+              variants={moveInVariants}
+            >
               Techstacks
-            </h3>
-            <Techstacks></Techstacks>
+            </motion.h3>
+            <Techstacks />
+          </div>
+          <div className="text-center p-10 py-10">
+            <motion.h3
+              className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
+              initial="hide"
+              whileInView="show"
+              exit="hide"
+              variants={moveInVariants}
+            >
+              Projects
+            </motion.h3>
+            <ProjectList />
           </div>
         </section>
       </main>
