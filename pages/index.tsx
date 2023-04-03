@@ -18,11 +18,11 @@ export default function Home() {
   const moveInVariants: Variants = {
     hide: {
       opacity: 0,
-      x: 100,
+      y: 50,
     },
     show: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 2,
       },
@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <Header></Header>
-      <main className="bg-white dark:bg-gray-900 px-10">
+      <main className="bg-gray-100 dark:bg-gray-900 px-10">
         <section className="min-h-screen">
           <Navbar updateDarkMode={updateDarkMode}></Navbar>
           <div className="text-center p-10 py-10">
