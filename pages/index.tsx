@@ -33,10 +33,10 @@ export default function Home() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <Header></Header>
-      <main className="bg-gray-100 dark:bg-gray-900 px-10">
+      <main className="bg-gray-100 dark:bg-gray-900 px-5 md:px-10">
         <section className="min-h-screen">
           <Navbar updateDarkMode={updateDarkMode}></Navbar>
-          <div className="text-center p-10 py-10">
+          <div className="text-center md:p-10 py-10">
             {/* Title */}
             <motion.div
               initial="hidden"
@@ -159,7 +159,7 @@ export default function Home() {
               <Image src={profile} alt="profile picture" />
             </div>
           </motion.div>
-          <div className="text-center p-10 py-10">
+          <div className="text-center md:p-10 py-10">
             <motion.h3
               className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
               initial="hide"
@@ -171,7 +171,7 @@ export default function Home() {
             </motion.h3>
             <Techstacks />
           </div>
-          <div className="text-center p-10 py-10">
+          <div className="text-center md:p-10 py-10">
             <motion.h3
               id="projects"
               className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
@@ -184,7 +184,7 @@ export default function Home() {
             </motion.h3>
             <ProjectList />
           </div>
-          <div className="text-center p-10 py-10">
+          <div className="text-center md:p-10 py-10">
             <motion.h3
               id="contact"
               className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"

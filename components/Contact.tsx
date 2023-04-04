@@ -97,7 +97,10 @@ const Contact = () => {
   return (
     <div className="bg-white mt-[5vh] mx-auto rounded-md shadow-xl md:max-w-3xl dark:bg-gray-800">
       <div className="p-2 md:p-6">
-        <form onSubmit={handleSubmit} className="flex flex-col px-20 py-8 ">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col px-8 py-8 md:px-20"
+        >
           <label
             htmlFor="fullname"
             className="text-gray-500 font-medium text-start my-4 ml-4 dark:text-gray-50"

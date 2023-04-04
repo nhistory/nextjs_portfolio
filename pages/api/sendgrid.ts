@@ -3,10 +3,11 @@ import sendgrid from '@sendgrid/mail';
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req: any, res: any) {
+  console.log(req.body);
   try {
     await sendgrid.send({
-      to: 'youremail@gmail.com', // Your email where you'll receive emails
-      from: 'youremail@gmail.com', // your website email address here
+      to: 'sehwan.lee.dev@gmail.com', // Your email where you'll receive emails
+      from: 'sehwan.lee.dev@gmail.com', // your website email address here
       subject: `[Lead from website] : ${req.body.subject}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
