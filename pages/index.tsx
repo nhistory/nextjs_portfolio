@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
 import Techstacks from '@/components/TechStacks';
 import ProjectList from '@/components/ProjectList';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -172,6 +173,7 @@ export default function Home() {
           </div>
           <div className="text-center p-10 py-10">
             <motion.h3
+              id="projects"
               className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
               initial="hide"
               whileInView="show"
@@ -181,6 +183,19 @@ export default function Home() {
               Projects
             </motion.h3>
             <ProjectList />
+          </div>
+          <div className="text-center p-10 py-10">
+            <motion.h3
+              id="contact"
+              className="text-3xl font-medium py-2 mb-12 dark:text-white md:text-4xl"
+              initial="hide"
+              whileInView="show"
+              exit="hide"
+              variants={moveInVariants}
+            >
+              Contact Me
+            </motion.h3>
+            <Contact />
           </div>
         </section>
       </main>

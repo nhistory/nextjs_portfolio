@@ -75,13 +75,10 @@ const Navbar: React.FC<IdarkModeProps> = ({ updateDarkMode }) => {
                 <Link href="/">Home</Link>
               </li>
               <li className="">
-                <Link href="/blogs">Blogs</Link>
+                <Link href="/#projects">Projects</Link>
               </li>
               <li className="">
-                <Link href="/about">About US</Link>
-              </li>
-              <li className="">
-                <Link href="/contact">Contact US</Link>
+                <Link href="/#contact">Contact</Link>
               </li>
             </ul>
           </div>
