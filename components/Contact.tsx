@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [fullname, setFullname] = useState('');
@@ -46,59 +47,59 @@ const Contact = () => {
     return isValid;
   };
 
-  //   const [form, setForm] = useState(false);
+  // EmailJS
+  const form = React.useRef(null);
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    let isValidForm = handleValidation();
+    const send = () =>
+      emailjs
+        .sendForm(
+          'service_rqn8m8q',
+          'template_oi1xdgf',
+          e.currentTarget,
+          'user_I2d38bj3b3HwJYHMBTKEt'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setShowSuccessMessage(true);
+            setShowFailureMessage(false);
+            setButtonText('Send Message');
+            // Reset form fields
+            setFullname('');
+            setEmail('');
+            setMessage('');
+            setSubject('');
+          },
+          (error) => {
+            console.log(error.text);
+            setShowSuccessMessage(false);
+            setShowFailureMessage(true);
+            setButtonText('Send Message');
 
+            // Reset form fields
+            setFullname('');
+            setEmail('');
+            setMessage('');
+            setSubject('');
+          }
+        );
+
+    let isValidForm = handleValidation();
     if (isValidForm) {
       setButtonText('Sending');
-      const res = await fetch('/api/sendgrid.ts', {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText('Send Message');
-
-        // Reset form fields
-        setFullname('');
-        setEmail('');
-        setMessage('');
-        setSubject('');
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText('Send Message');
-      // Reset form fields
-      setFullname('');
-      setEmail('');
-      setMessage('');
-      setSubject('');
+      send();
     }
-    console.log(fullname, email, subject, message);
   };
 
   return (
     <div className="bg-white mt-[5vh] mx-auto rounded-md shadow-xl md:max-w-3xl dark:bg-gray-800">
       <div className="p-2 md:p-6">
         <form
-          onSubmit={handleSubmit}
+          ref={form}
+          onSubmit={sendEmail}
           className="flex flex-col px-8 py-8 md:px-20"
         >
           <label
