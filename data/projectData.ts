@@ -36,12 +36,12 @@ export const projects: ProjectObject[] = [
       stack:
         'React, FastAPI, MongoDB, Python, ChartJS, Selenium, Docker, Pytest',
       build: [
-        'Developed front end design with back-end services and databases to help used car search and comparison with 2 scattered charts and price patterns from 500+ used car models.',
-        'Designed and modified backend APIs and REST architectures using Python with testable, efficient code.',
-        'Worked on CI-CD process, and container-based architectures to establish a development environment and contributed technical architecture for DevOps.',
-        'Followed Agile development methodology with GIT repos and maintained readable project documentation.',
-        'Wrote unit test automation and how can share the development environment by Docker.',
-        'Interacted with 3 team members to plan and estimate development tasks.',
+        'Developed and implemented a front-end design that integrated with back-end services and databases to enable efficient searching and comparison of over 500 used car models, using two scatter charts and price patterns.',
+        'Designed and optimized RESTful APIs and backend architectures using Python, creating testable and efficient code.',
+        'Spearheaded the establishment of a container-based architecture and CI/CD process, contributing to the technical architecture for DevOps and ensuring a streamlined development environment.',
+        'Followed Agile development methodology, utilizing GIT repositories and maintaining comprehensive project documentation to ensure project success.',
+        'Automated unit testing and implemented Docker to enable efficient sharing of development environments.',
+        'Collaborated with a team of three to plan and estimate development tasks, ensuring project milestones were met.',
       ],
     },
   },
@@ -53,10 +53,14 @@ export const projects: ProjectObject[] = [
     link: { code: 'https://github.com/nhistory/electron-music-player' },
     modal: {
       image: '/projects/musicPlayer.gif',
-      type: 'Private Project',
+      type: 'Toy Project',
       keyFunc: 'Play next, previous songs as a desktop app',
       stack: 'Electron, JavaScript, jQuery, CSS',
-      build: [],
+      build: [
+        'Designed and developed a music player desktop application using ElectronJS v20, featuring the ability to play, rewind, and fast-forward mp3 formats with ease.',
+        'Utilized preload script to effectively communicate between channels and enable context-isolated processes within the application.',
+        'Leveraged Javascript fs and music-metadata libraries to effectively manage music files on local devices, ensuring seamless functionality of the music player.'
+      ],
     },
   },
   {
@@ -72,10 +76,10 @@ export const projects: ProjectObject[] = [
       keyFunc: 'CRUD employee and project information',
       stack: 'React, NodeJS, express, MongoDB, Bootstrap, GraphQL',
       build: [
-        'Built backend with expressjs and handled by using graphQL mutation.',
-        'Used graphiql for checking graphql schema on the browser.',
-        'Made cloud-based database by using mongodb atlas and controled with mongodb compass.',
-        'Build client side with React and apollo, graphql, react-router-dom, react-icons packages.',
+        'Developed a robust backend utilizing ExpressJS, while leveraging graphQL mutation to enhance performance and data handling capabilities.',
+        'Utilized GraphiQL to effectively check the GraphQL schema on the browser, ensuring seamless functionality of the application.',
+        'Created a cloud-based database using MongoDB Atlas and effectively controlled it with MongoDB Compass, ensuring seamless data management capabilities.',
+        'Built an efficient client-side application using React, Apollo, GraphQL, react-router-dom, and react-icons packages, resulting in a user-friendly and responsive application.',
       ],
     },
   },

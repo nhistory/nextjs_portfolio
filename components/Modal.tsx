@@ -66,19 +66,19 @@ const Modal: React.FC<IModalProps> = ({ projectIndex, closeModal }) => {
               />
               <ul className="flex flex-col md:grid grid-cols-3 gap-5 text-redis-neutral-800 border-t max-w-2xl mx-auto px-10 pt-8">
                 <li className="w-full text-sm text-slate-900 p-6 bg-gray-100 border border-slate-900/10 bg-clip-padding shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center dark:bg-gray-700 dark:text-white">
-                  <span className="mb-1 font-semibold font-display text-base dark:text-teal-400">
+                  <span className="mb-1 font-semibold font-display text-base text-teal-600 dark:text-teal-400">
                     {projects[projectIndex].modal.type}
                   </span>
                   {projects[projectIndex].modal.part}
                 </li>
                 <li className="w-full text-sm text-slate-900 p-6 bg-gray-100 border border-slate-900/10 bg-clip-padding shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center dark:bg-gray-700 dark:text-white">
-                  <span className="mb-1 font-semibold font-display text-base dark:text-teal-400">
+                  <span className="mb-1 font-semibold font-display text-base text-teal-600 dark:text-teal-400">
                     Key Function
                   </span>
                   {projects[projectIndex].modal.keyFunc}
                 </li>
                 <li className="w-full text-sm text-slate-900 p-6 bg-gray-100 border border-slate-900/10 bg-clip-padding shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center dark:bg-gray-700 dark:text-white">
-                  <span className="mb-1 font-semibold font-display text-base dark:text-teal-400">
+                  <span className="mb-1 font-semibold font-display text-base text-teal-600 dark:text-teal-400">
                     Tech Stacks
                   </span>
                   {projects[projectIndex].modal.stack}

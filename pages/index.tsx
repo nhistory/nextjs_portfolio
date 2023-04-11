@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import profile from '../public/profile-modified.png';
+import profile from '@/public/profile-modified.png';
 import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
 import Techstacks from '@/components/TechStacks';
