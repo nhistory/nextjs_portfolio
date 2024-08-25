@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import { useState } from 'react';
-import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai';
-import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
-import profile from '@/public/profile-modified.png';
-import Navbar from '@/components/Navbar';
-import Header from '@/components/Header';
-import Techstacks from '@/components/TechStacks';
-import ProjectList from '@/components/ProjectList';
-import Contact from '@/components/Contact';
+import Link from "next/link";
+import { useState } from "react";
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+import profile from "@/public/profile-modified.png";
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import Techstacks from "@/components/TechStacks";
+import ProjectList from "@/components/ProjectList";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div className={darkMode ? "dark" : ""}>
       <Header></Header>
       <main className="bg-gray-100 dark:bg-gray-900 px-5 md:px-10">
         <section className="min-h-screen">

@@ -1,13 +1,12 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import React from "react";
 import Script from "next/script";
 
-export default function App({ Component, pageProps }: AppProps) {
+const GoogleAnalytics = () => {
   return (
     <>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
       />
 
       <Script id="" strategy="lazyOnload">
@@ -20,7 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
               });
           `}
       </Script>
-      <Component {...pageProps} />
     </>
   );
-}
+};
+
+export default GoogleAnalytics;
