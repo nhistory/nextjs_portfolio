@@ -1,17 +1,17 @@
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
-import Image from 'next/image';
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import Image from "next/image";
 
 const imageList: string[] = [
-  '/logos/html.png',
-  '/logos/css.png',
-  '/logos/javascript.png',
-  '/logos/typescript.png',
-  '/logos/sass.png',
-  '/logos/react.png',
-  '/logos/python.png',
-  '/logos/php.png',
-  '/logos/electron.png',
+  "/logos/html.png",
+  "/logos/css.png",
+  "/logos/javascript.png",
+  "/logos/typescript.png",
+  "/logos/sass.png",
+  "/logos/react.png",
+  "/logos/python.png",
+  "/logos/php.png",
+  "/logos/electron.png",
 ];
 
 const responsiveSettings = [
@@ -56,6 +56,7 @@ const Techstacks = () => {
               alt="techstacks"
               width={80}
               height={80}
+              style={{ width: "60%", height: "auto" }}
               priority
               className="py-auto mx-1 md:mx-0"
             />
