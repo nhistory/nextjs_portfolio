@@ -5,6 +5,16 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body className="font-poppins">
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M8TCL5WF"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <Main />
         <NextScript />
       </body>
